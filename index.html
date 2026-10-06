@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="Juniper - tu asistente personal de IA">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Juniper IA</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <img src="/icon.svg" alt="Juniper" class="brand-icon">
+        <div>
+          <div class="brand-name">Juniper</div>
+          <div class="brand-status"><span></span> Asistente personal de IA</div>
+        </div>
+      </div>
+      <button id="installBtn" class="ghost-btn hidden">Instalar</button>
+    </header>
+
+    <main class="main">
+      <section id="welcome" class="welcome">
+        <div class="hero-icon"><img src="/icon.svg" alt=""></div>
+        <h1>Hola, José Antonio 👋</h1>
+        <p>Soy <strong>Juniper</strong>. Puedo ayudarte a estudiar, investigar, crear documentos, preparar ideas y mucho más.</p>
+        <div class="quick-grid">
+          <button data-prompt="Ayúdame a organizar un trabajo universitario paso a paso.">🎓 Estudios</button>
+          <button data-prompt="Ayúdame a crear una propuesta de tesis educativa.">📚 Tesis</button>
+          <button data-prompt="Ayúdame a redactar un informe profesional.">📝 Informe</button>
+          <button data-prompt="Dame ideas para un video y sus prompts.">🎬 Videos</button>
+        </div>
+      </section>
+
+      <section id="chat" class="chat hidden" aria-live="polite"></section>
+    </main>
+
+    <form id="composer" class="composer">
+      <button type="button" id="micBtn" class="round-btn" title="Hablar">🎙️</button>
+      <textarea id="input" rows="1" placeholder="Escribe a Juniper..." autocomplete="off"></textarea>
+      <button type="submit" class="send-btn" title="Enviar">➤</button>
+    </form>
+
+    <footer class="footer">
+      <button id="clearBtn">Nueva conversación</button>
+      <button id="speakBtn">🔊 Leer respuestas</button>
+    </footer>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
